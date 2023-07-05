@@ -6,21 +6,11 @@ import "@fontsource/roboto/700.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import CssBaseline from "@mui/material/CssBaseline";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { RootPage } from "./routes/index.tsx";
-import { ErrorPage } from "./routes/error.tsx";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootPage />,
-    errorElement: <ErrorPage />,
-  },
-]);
+import { App } from "./App.tsx";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <CssBaseline />
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>
 );
